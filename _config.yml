@@ -1,26 +1,22 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
-
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
-
 # Setup
-title:            classified5
-tagline:          'Blog'
-description:      'Hyde - Theme Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              https://classified5.github.io/
-baseurl:          ''
+title:               classified5
+tagline:             'Blog'
+description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:                 https://classified5.github.io/
+baseurl:             ''
+paginate:            5
+permalink:           pretty
 
+# About/contact
 author:
-  name:           'Aditya Ikhsan'
-  url:            
+  name:              Aditya Ikhsan
+  url:               https://classified5.github.io
+  email:             
 
-paginate:         5
+# Gems
+plugins:
+  - jekyll-paginate
 
 # Custom vars
-version:          2.1.0
-
-github:
-  repo:           https://github.com/poole/hyde
+version:             1.1.0
+google_analytics_id: #UA-XXXX-Y
