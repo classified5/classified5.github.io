@@ -31,16 +31,16 @@
     let gTagElement = document.createElement('script');
     var gTagSource = "https://www.googletagmanager.com/gtag/js?id="
     var gTagID = '{{ site.google_analytics_id }}'
-    console.log(gTagID);
+   
     gTagElement.src = gTagSource + gTagID;
-    gTagElement.async = ture;
+    gTagElement.async = true;
     document.body.append(gTagElement);
 
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+   
     gtag('js', new Date());
-
-    gtag('config', '{{ site.google_analytics_id }}');
+    gtag('config', gTagID);
   </script>
   {% endif %}
 </head>
