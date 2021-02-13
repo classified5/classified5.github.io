@@ -34,7 +34,7 @@
    
     gTagElement.src = gTagSource + gTagID;
     gTagElement.async = true;
-    document.body.append(gTagElement);
+    document.head.append(gTagElement);
 
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
