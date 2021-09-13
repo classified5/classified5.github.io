@@ -2,7 +2,7 @@
 title:               classified5
 tagline:             'Blog'
 description:         'A simple blog about things I want to share. Enjoy!'
-url:                 https://classified5.github.io/
+url:                 https://classified5.github.io
 baseurl:             ''
 paginate:            5
 permalink:           pretty
