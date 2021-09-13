@@ -105,9 +105,13 @@ Before running any command, make sure you are inside the same directory of `grad
 go test -run TestGetGrade
 ```
 We use built in `go` command to run the unit test. This command will run `TestGetGrade` function only. It's easy and simple right! Here is the result. 
+
+#### Failed Unit Test
 ![failed unit test](https://classified5.github.io/img/Failed_Unit_Test.PNG)
 
 Yes the unit test failed but it is expected. We always want to run a failing test first to ensure the unit test code works as expected. Based on the logs, we can see that the expected test case output does not match the actual output in test case name `Grade A Test`. Now let's fix the test case and run the unit test again. This is where test case name comes in handy. It makes debugging easier.
+
+#### Success Unit Test
 ![success unit test](https://classified5.github.io/img/Success_Unit_Test.PNG)
 
 Yes congratulations! We have successfully run a passing unit test. For the next part, I will try to introduce useful additional commands that will help us analyzing our unit test.
@@ -120,16 +124,16 @@ go tool cover -html=coverage.out
 ```
 The command `-cover` counts unit test coverage. While `-coverprofile` stores coverage calculations in coverage.out file. The result can be presented in a html page using the `-html` command.
 
-Command line result
+#### Command Line Result
 ![coverage 1 unit test](https://classified5.github.io/img/Success_Coverage_Unit_Test.PNG)
-HTML result
+#### HTML Result
 ![coverage 1 html](https://classified5.github.io/img/Coverage_1_HTML.PNG)
 
 On the command line result, we can see the percentage of the coverage. To illustrate them in html, we can simply run the `go tool` command and open the result in a browser. The green color indicates the unit test is covered while the red color is the contrary. Since we now know which part of the code that needs additional test case, it's time to add them and test the result.
 
-Command line result
+#### Command Line Result
 ![coverage 2 unit test](https://classified5.github.io/img/Success_Coverage_100_Unit_Test.PNG)
-HTML result
+#### HTML Result
 ![coverage 2 html](https://classified5.github.io/img/Coverage_2_HTML.PNG)
 
 Voila! We have a 100% unit test code coverage. From this example, we can learn that having a passing unit test is not enough. We need to have a 100% unit test code coverage to make sure our code works as expected and prevent unwanted incidents. This way we will feel much more confident when deploying our code to production environment.
